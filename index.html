@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Palette Generator</title>
+
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	
+	<main>
+		<h1>Color Palette</h1>
+		<p>
+			Press [<button class="generator-button">Space</button>] for your new palette!
+		</p>
+		
+
+		<h4>COLORS 4 U!</h4>
+
+		<div class="colors">
+			<div class="color">
+				<button class="lock-toggle">
+					<img src="./iconos/lock-open.svg" />
+				</button>
+				
+				<input type="text" class="color-input" value="#000000" />
+
+				<button class="copy-hex" onclick="copyToClipboard()">Copy</button>
+                
+			</div>
+			<div class="color">
+				<button class="lock-toggle">
+					<img src="./iconos/lock-open.svg" />
+				</button>
+				
+				<input type="text" class="color-input" value="#000000" />
+
+				<button class="copy-hex" onclick="copyToClipboard()">Copy</button>
+			</div>
+			<div class="color">
+				<button class="lock-toggle">
+					<img src="./iconos/lock-open.svg" />
+				</button>
+				
+				<input type="text" class="color-input" value="#000000" />
+
+				<button class="copy-hex" onclick="copyToClipboard()">Copy</button>
+			</div>
+			<div class="color">
+				<button class="lock-toggle">
+					<img src="./iconos/lock-open.svg" />
+				</button>
+				
+				<input type="text" class="color-input" value="#000000" />
+
+				<button class="copy-hex" onclick="copyToClipboard()">Copy</button>
+			</div>
+		</div>
+	</main>
+
+	
+   
+
+ 
+	<div class="gradient-box">
+		<h1 class="gradient-title">Gradient Generator</h1>
+    	<div id="radio-options">
+        <input type="radio" id="linear" name="gradient" value="linear" checked="true"> 
+    
+
+			<div class="gradient" id="gradient-clone"></div>
+  				<input class="color1" type="color" name="color1" value="#1ed846">
+  				<input class="color2" type="color" name="color2" value="#29f5fc">
+				
+				<button class="button-gradient" id="gradient-clone" role="button">Copy Code</button>
+			
+	<script src="main.js"></script>
+</body>
+</html>

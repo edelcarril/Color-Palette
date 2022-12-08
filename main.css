@@ -1,0 +1,282 @@
+:root {
+	--primary: #1ed846;
+	--secondary: #29f5fc;
+	--light: rgb(253, 253, 253);
+	--grey: #AAA;
+	--dark: #1e2f42;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+html{
+	overflow: hidden;
+}
+
+body {
+	background-color: var(--dark);
+	display: grid;
+	grid-template-columns: 10% 35% 10% 35% 10%;
+	grid-template-rows: 50% 50%;
+	row-gap:7%;
+	grid-template-areas: 
+		"space color color color space"
+		"space gradient gradient gradient space"
+	;
+}
+
+main {
+	padding: 4rem 2rem;
+	max-width: 1200px;
+	margin: -10% auto;
+	display: grid;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	scale: 85%;
+	grid-area: "color";
+}
+
+h1 {
+	color: var(--light);
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+p {
+	color: var(--light);
+	font-size: 1.125rem;
+	margin-bottom: 2rem;
+}
+
+.generator-button {
+	color: var(--primary);
+	font-size: inherit;
+	font-weight: 700;
+	background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: 0.4s ease-out;
+}
+
+.generator-button:hover {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+h4 {
+	color: var(--light);
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+
+.colors {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 200px;
+	grid-gap: 1rem;
+}
+
+.color {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	background-color: var(--dark);
+	color: #fff;
+	border-radius: 1rem;
+	transition: 0.4s ease-out;
+	border: 2px solid transparent;
+}
+
+
+.color.copied {
+	border: 5px solid #1e2f42;
+}
+
+.copy-hex{
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    background-color: var(--dark);
+    padding: 8px;
+}
+
+button, input {
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	color: inherit;
+}
+
+button {
+	user-select: none;
+	cursor: pointer;
+}
+
+.lock-toggle {
+	opacity: 0.5;
+	transition: 0.4s linear;
+}
+
+.lock-toggle.is-locked {
+	opacity: 1;
+}
+
+.color-input {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.colors {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.colors {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.color {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+	}
+
+	.color-input {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.colors {
+		grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 60px;
+	}
+}
+
+
+
+.colors-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	gap: 2%;
+}
+
+.color1, .color2 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	width: 30px;
+	height: 32px;
+	margin-top: 0.8rem;
+
+	cursor: pointer;
+  }
+  .color1::-webkit-color-swatch {
+	border-radius: 50%;
+	border: 1px #1e2f42;
+  }
+
+  .color2::-webkit-color-swatch {
+	border-radius: 50%;
+	border: 1px #1e2f42;
+  }
+
+
+  
+.gradient-title{
+	width: 1200px;
+	max-width: 1200px;
+	display: grid;
+	justify-content:left ;
+	align-items: center;
+	margin-left: -7.5%;
+	scale: 85%;
+}
+
+.gradient{
+	background: linear-gradient(to right, var(--primary), var(--secondary));	
+	width: 30%;
+	height: 50%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 2rem;
+	max-width: 1200px;
+	grid-area: "gradient";
+	border-radius: 1rem;
+}
+
+.gradient-box{
+	display: grid;
+	grid-template-rows: 10% 10% 80%;
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	max-width: 1200px;
+	width: 100%;
+	
+	margin: 0 13%;
+	
+}
+
+.copy-gradient{
+	border: solid #AAA 2px;
+	padding: 1%;
+	border-radius: 2rem;
+}
+
+.copy-gradient:hover {
+	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.24);
+	
+}
+
+
+
+
+.button-gradient {
+  align-items: center;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #1e2f42;
+  display: inline;
+  
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 120px;
+  padding: 12px 10px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.button-gradient:active,
+.button-gradient:hover {
+  outline: 0;
+}
+
